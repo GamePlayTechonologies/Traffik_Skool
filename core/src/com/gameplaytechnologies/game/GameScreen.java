@@ -2,6 +2,8 @@ package com.gameplaytechnologies.game;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.gameplaytechnologies.game.GameRenderer;
+
 
 public class GameScreen implements Screen {
     private GameWorld gameWorld;
@@ -11,19 +13,14 @@ public class GameScreen implements Screen {
         gameWorld = new GameWorld(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         gameRenderer = new GameRenderer(gameWorld);
     }
-    private int screenWidth;
-    private int screenHeight;
 
-    public GameWorld(int screenWidth, int screenHeight) {
-        this.screenWidth = screenWidth;
-        this.screenHeight = screenHeight;
     @Override
     public void show() {
     }
 
     @Override
     public void render(float delta) {
-        gameRenderer.render(delta);
+        gameRenderer.render();
     }
 
     @Override
