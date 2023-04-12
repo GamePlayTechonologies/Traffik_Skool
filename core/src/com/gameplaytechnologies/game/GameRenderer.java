@@ -7,7 +7,6 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
-import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 
 public class GameRenderer {
 
@@ -39,16 +38,12 @@ public class GameRenderer {
         shapeRenderer.rect(gameWorld.getLeftButton().x, gameWorld.getLeftButton().y, gameWorld.getLeftButton().width, gameWorld.getLeftButton().height);
         shapeRenderer.rect(gameWorld.getRightButton().x, gameWorld.getRightButton().y, gameWorld.getRightButton().width, gameWorld.getRightButton().height);
 
-        // End shapeRenderer
         shapeRenderer.end();
 
-        // Begin spriteBatch
         spriteBatch.begin();
 
-        // Render the car
         spriteBatch.draw(carTexture, gameWorld.getCar().x, gameWorld.getCar().y, gameWorld.getCar().width, gameWorld.getCar().height);
 
-        // End spriteBatch
         spriteBatch.end();
     }
 }
