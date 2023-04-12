@@ -1,4 +1,4 @@
-package com.gameplaytechnologies.game;
+package com.gameplaytechnologies.game.android;
 
 import android.os.Bundle;
 import android.content.pm.ActivityInfo;

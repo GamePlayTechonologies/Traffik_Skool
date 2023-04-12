@@ -1,3 +1,7 @@
+package com.gameplaytechnologies.game;
+
+import com.gameplaytechnologies.game.PlayerCar;
+
 public class GameWorld {
     private PlayerCar playerCar;
     private int screenWidth;
@@ -20,4 +24,8 @@ public class GameWorld {
     public int getScreenHeight() {
         return screenHeight;
     }
+    public void update(float delta) {
+        playerCar.update(delta);
+    }
 }
+
