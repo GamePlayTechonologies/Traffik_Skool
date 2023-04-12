@@ -22,7 +22,7 @@ public class OtherCar extends Car {
         setPosition(getPosition().add(velocity.cpy().scl(delta)));
 
         if (getPosition().y + getHeight() < 0) {
-            setPosition(new Vector2(MathUtils.random(40, screenWidth - 40 - texture.getWidth()), screenHeight));
+            position.set(new Vector2(MathUtils.random(40, screenWidth - 40 - texture.getWidth()), screenHeight));
             velocity.y = -MathUtils.random(100, 200);
         }
     }
