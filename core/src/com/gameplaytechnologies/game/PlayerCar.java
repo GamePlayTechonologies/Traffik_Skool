@@ -13,9 +13,14 @@ public class PlayerCar extends Car {
     private static final float MOVE_AMOUNT = 5;
 
 
-    public PlayerCar(float x, float y) {
+    public PlayerCar(float x, float y, float width, float height) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
         super(new Vector2(x, y), CAR_WIDTH, CAR_HEIGHT);
         carTexture = new Texture(Gdx.files.internal("car.png"));
+
     }
     public void draw(SpriteBatch spriteBatch) {
         spriteBatch.draw(carTexture, position.x, position.y, width, height);

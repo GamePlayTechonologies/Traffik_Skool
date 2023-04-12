@@ -13,7 +13,6 @@ public class GameScreen implements Screen {
     private GameRenderer gameRenderer;
 
     public GameScreen() {
-        gameWorld = new GameWorld(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         gameRenderer = new GameRenderer(gameWorld);
     }
 
